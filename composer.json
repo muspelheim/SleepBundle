@@ -1,0 +1,29 @@
+{
+  "name": "muspelheim/sleep-bundle",
+  "type": "symfony-bundle",
+  "description": "Super Sleep Bundle based on Symfony Framework",
+  "keywords": [
+    "symfony2",
+    "sleep",
+    "helpful",
+    "delay",
+    "mush have",
+    "muspelheim"
+  ],
+  "homepage": "https://github.com/muspelheim/SleepBundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "muspelheim"
+    }
+  ],
+  "require": {
+    "php": ">=5.3 || >=7.0",
+    "symfony/symfony": ">=2.7.13 || >=2.8.6 || >=3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Muspelheim\\SleepBundle\\": ""
+    }
+  }
+}
