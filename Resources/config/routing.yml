@@ -1,0 +1,3 @@
+muspelheim_sleep_homepage:
+    path:     /
+    defaults: { _controller: MuspelheimSleepBundle:Default:index }
