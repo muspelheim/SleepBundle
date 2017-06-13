@@ -22,7 +22,7 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->arrayNode('stage_lag')
+                ->arrayNode('dev_lag')
                     ->addDefaultsIfNotSet()
                     ->children()
                         ->scalarNode('post')->defaultValue(0)->end()

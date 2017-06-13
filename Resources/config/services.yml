@@ -1,1 +1,20 @@
+parameters:
+    sleep_manager.class: Muspelheim\SleepBundle\Services\SleepManager
+    sleep_manager.options:
+        dev:
+            post: '%muspelheim_sleep.dev_lag.post%'
+            get: '%muspelheim_sleep.dev_lag.get%'
+        prod:
+            post: '%muspelheim_sleep.prod_lag.post%'
+            get: '%muspelheim_sleep.prod_lag.get%'
+
 services:
+    muspelheim_sleep.manager.sleep:
+        class: '%sleep_manager.class%'
+        arguments: ['%sleep_manager.options%']
+
+    muspelheim_sleep.listeners.sleep:
+        class: Muspelheim\SleepBundle\EventListeners\SleepRequestListener
+        arguments: ['@muspelheim_sleep.manager.sleep', '@kernel']
+        tags:
+            - { name: kernel.event_listener, event: kernel.request }

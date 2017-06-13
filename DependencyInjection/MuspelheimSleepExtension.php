@@ -22,8 +22,8 @@ class MuspelheimSleepExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $container->setParameter('muspelheim_sleep.stage_lag.post', $config['stage_lag']['post']);
-        $container->setParameter('muspelheim_sleep.stage_lag.get', $config['stage_lag']['get']);
+        $container->setParameter('muspelheim_sleep.dev_lag.post', $config['dev_lag']['post']);
+        $container->setParameter('muspelheim_sleep.dev_lag.get', $config['dev_lag']['get']);
         $container->setParameter('muspelheim_sleep.prod_lag.post', $config['prod_lag']['post']);
         $container->setParameter('muspelheim_sleep.prod_lag.get', $config['prod_lag']['get']);
 
