@@ -54,6 +54,6 @@ class SleepManager implements SleepManagerInterface
      */
     private function postRequestDelay($environment)
     {
-        return sleep($this->options[$environment][self::HTTP_GET]);
+        return sleep($this->options[$environment][self::HTTP_POST]);
     }
 }
